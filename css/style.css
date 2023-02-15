@@ -1,3 +1,27 @@
+/*
+ Media querey manager
+
+RANGES
+0 - 600px Phoe
+600px - 900px Potrait tablet
+900px - 1200px Landscape tablet
+1200px - 1800px desktop (our normal styles)
+> 1800x larger desktop
+
+// @mixin respond-phone {
+//   @media (max-width: 600px) {
+//     @content;
+//   }
+// }
+
+breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+here 1em is 16px
+*/
 *,
 *::after,
 *::before {
@@ -9,12 +33,29 @@
 html {
   font-size: 62.5%;
 }
-
-body {
-  box-sizing: border-box;
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
+  box-sizing: border-box;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
