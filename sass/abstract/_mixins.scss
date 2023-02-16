@@ -36,6 +36,8 @@ breakpoint argument choices
 - big-desktop
 
 here 1em is 16px
+
+ORDER: Base + typography > general layout (header fotoer nav) + grid > page layout > compoents
 */
 
 @mixin respond($breakpoint) {
